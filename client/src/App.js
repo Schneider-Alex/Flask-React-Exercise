@@ -3,6 +3,7 @@ import React  from 'react';
 
 function App() {
   const [string, setString] = useState("Hello World");
+  const [bool, setBool] = useState(true);
   const [data, setData] = useState([{}]);
 
   useEffect(()=>{
@@ -25,6 +26,8 @@ function App() {
     )}
     <p>{string}</p>
     <button onClick={()=> setString('Goodbye World') }>Press me for goodbye</button>
+    {bool ? <p>True</p> : <p>False</p>}
+    <button onClick={()=> bool ? setBool(false):setBool(true)}>Toggle me!</button>
     </div>
     
   )
