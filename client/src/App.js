@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import React  from 'react';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [string, setString] = useState("Hello World");
   const [data, setData] = useState([{}]);
 
   useEffect(()=>{
@@ -23,10 +23,10 @@ function App() {
       <p key={i}>{member}</p>
     ))
     )}
-    <p>{count}</p>
-    <button onClick={() => setCount(count+1)}>Press me to increase count</button>
-    <button onClick={() => setCount(count-1)}>Press me to decrease count</button>
+    <p>{string}</p>
+    <button onClick={()=> setString('Goodbye World') }>Press me for goodbye</button>
     </div>
+    
   )
 }
 
